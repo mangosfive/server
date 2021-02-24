@@ -17,17 +17,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-add_subdirectory(shared)
-
-if(BUILD_REALMD)
-    add_subdirectory(realmd)
-endif()
-
-if (BUILD_MANGOSD OR BUILD_REALMD)
-    if(WIN32)
-        get_filename_component(MYSQL_LIB_DIR ${MySQL_LIBRARIES} DIRECTORY)
-        get_filename_component(MYSQL_LIB_DLL ${MySQL_LIBRARIES} NAME)
-        STRING(REPLACE ".lib" ".dll" MYSQL_LIB_DLL ${MYSQL_LIB_DLL})
-        install(FILES ${MYSQL_LIB_DIR}/${MYSQL_LIB_DLL} DESTINATION ${BIN_DIR})
-    endif()
+# Build the mangos script library if enabled
+if(SCRIPT_LIB_SD3)
+    add_subdirectory(SD3)
 endif()
