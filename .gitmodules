@@ -4,3 +4,6 @@
 [submodule "win"]
 	path = win
 	url = https://github.com/mangostools/EasyBuild
+[submodule "src/realmd"]
+	path = src/realmd
+	url = https://github.com/mangos/realmd
