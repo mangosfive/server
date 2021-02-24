@@ -1,0 +1,6 @@
+[submodule "dep"]
+	path = dep
+	url = https://github.com/mangos/mangosDeps
+[submodule "win"]
+	path = win
+	url = https://github.com/mangostools/EasyBuild
